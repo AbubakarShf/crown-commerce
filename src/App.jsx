@@ -1,5 +1,5 @@
 import React from "react"
-import CategoryItem from "./components/CategoryItem/CategoryItem"
+import Directory from "./components/directory/Directory"
 const App = () => {
   const category = [
     {
@@ -32,9 +32,7 @@ const App = () => {
   return (
     <React.Fragment>
       <div className='categories-container'>
-        {category.map((category) => {
-          return <CategoryItem {...category} />
-        })}
+        <Directory categories={category} />
       </div>
     </React.Fragment>
   )
