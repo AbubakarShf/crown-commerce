@@ -1,39 +1,21 @@
 import React from "react"
-import Directory from "./components/directory/Directory"
-const App = () => {
-  const category = [
-    {
-      id: 1,
-      title: "hats",
-      imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
-    },
-    {
-      id: 2,
-      title: "jackets",
-      imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
-    },
-    {
-      id: 3,
-      title: "sneakers",
-      imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
-    },
-    {
-      id: 4,
-      title: "womens",
-      imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-    },
-    {
-      id: 5,
-      title: "mens",
-      imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
-    },
-  ]
+import { Route, Routes } from "react-router-dom"
+import Navigation from "./components/navigation/Navigation"
+import Home from "./routes/home/Home"
+const Shope = () => {
+  return <h1>Shope Component</h1>
+}
 
+
+const App = () => {
   return (
     <React.Fragment>
-      <div className='categories-container'>
-        <Directory categories={category} />
-      </div>
+      <Routes>
+        <Route path='/' exact element={<Navigation />}>
+          <Route path='home' exact element={<Home />}/>
+            <Route path='shope' exact element={<Shope />} />
+          </Route>
+      </Routes>
     </React.Fragment>
   )
 }

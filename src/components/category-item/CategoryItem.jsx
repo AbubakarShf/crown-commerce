@@ -10,7 +10,7 @@ const CategoryItem = ({title,imageUrl}) => {
           className='background-image'
         />
         <div className='category-body-container'>
-          <h2>{title}</h2>
+          <h2 style={{textTransform:'capitalize' }}>{title}</h2>
           <p>Shope Now</p>
         </div>
       </div>
